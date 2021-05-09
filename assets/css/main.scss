@@ -1,0 +1,52 @@
+/* Font */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+
+/* Variables */
+$colors: (
+  main-bg: hsl(233, 47%, 7%),
+  card-bg: hsl(244, 38%, 16%),
+  violet: hsl(277, 64%, 61%),
+  white: hsl(0, 0%, 100%),
+  paragraph: hsla(0, 0%, 100%, 0.75),
+  stat-head: hsla(0, 0%, 100%, 0.6),
+);
+
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+$desktop: 1440px;
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-size: 15px;
+  font-family: "Inter";
+  letter-spacing: 1px;
+  background-color: color(main-bg);
+  color: color(paragraph);
+}
