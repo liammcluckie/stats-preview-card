@@ -5,7 +5,7 @@
 $colors: (
   main-bg: hsl(233, 47%, 7%),
   card-bg: hsl(244, 38%, 16%),
-  violet: hsl(277, 64%, 61%),
+  accent: hsl(277, 64%, 61%),
   white: hsl(0, 0%, 100%),
   paragraph: hsla(0, 0%, 100%, 0.75),
   stat-head: hsla(0, 0%, 100%, 0.6),
@@ -40,7 +40,10 @@ $desktop: 1440px;
 html,
 body {
   height: 100%;
-  overflow: hidden;
+}
+
+.uppercase {
+  text-transform: uppercase;
 }
 
 body {
@@ -49,4 +52,85 @@ body {
   letter-spacing: 1px;
   background-color: color(main-bg);
   color: color(paragraph);
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: relative;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+main {
+  margin: 0 auto;
+}
+
+/* Card */
+.card-container {
+  width: 20.5rem;
+  height: auto;
+  text-align: center;
+  background-color: color(card-bg);
+  border-radius: 8px;
+  margin: 88px 24px;
+  padding-bottom: 32px;
+}
+
+/* Card image */
+.card-image {
+  width: 327px;
+  height: 240px;
+  background: linear-gradient(
+      to right,
+      rgba(170, 92, 219, 0.33),
+      rgba(170, 92, 219, 0.33)
+    ),
+    url("../images/image-header-mobile.jpg") no-repeat;
+  background-size: cover;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+
+/* Card Header */
+.card-header {
+  margin-top: 40px;
+  line-height: 32px;
+}
+
+#accent {
+  color: color(accent);
+}
+
+/* Card Content */
+.card-content {
+  margin-top: 16px;
+  margin-bottom: 40px;
+  line-height: 25px;
+  mix-blend-mode: normal;
+  opacity: 0.75;
+}
+
+/* Card stats */
+.card-stats ul li {
+  margin-bottom: 24px;
+}
+
+.card-stats ul li h2 {
+  margin-bottom: 8px;
+}
+
+.card-stats ul li p {
+  mix-blend-mode: normal;
+  opacity: 0.75;
+}
+
+/* Footer */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }

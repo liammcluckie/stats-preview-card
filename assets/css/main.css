@@ -20,7 +20,10 @@
 html,
 body {
   height: 100%;
-  overflow: hidden;
+}
+
+.uppercase {
+  text-transform: uppercase;
 }
 
 body {
@@ -29,5 +32,88 @@ body {
   letter-spacing: 1px;
   background-color: #090b1a;
   color: rgba(255, 255, 255, 0.75);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+  position: relative;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+main {
+  margin: 0 auto;
+}
+
+/* Card */
+.card-container {
+  width: 20.5rem;
+  height: auto;
+  text-align: center;
+  background-color: #1b1938;
+  border-radius: 8px;
+  margin: 88px 24px;
+  padding-bottom: 32px;
+}
+
+/* Card image */
+.card-image {
+  width: 327px;
+  height: 240px;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(170, 92, 219, 0.33)), to(rgba(170, 92, 219, 0.33))), url("../images/image-header-mobile.jpg") no-repeat;
+  background: linear-gradient(to right, rgba(170, 92, 219, 0.33), rgba(170, 92, 219, 0.33)), url("../images/image-header-mobile.jpg") no-repeat;
+  background-size: cover;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+
+/* Card Header */
+.card-header {
+  margin-top: 40px;
+  line-height: 32px;
+}
+
+#accent {
+  color: #aa5cdb;
+}
+
+/* Card Content */
+.card-content {
+  margin-top: 16px;
+  margin-bottom: 40px;
+  line-height: 25px;
+  mix-blend-mode: normal;
+  opacity: 0.75;
+}
+
+/* Card stats */
+.card-stats ul li {
+  margin-bottom: 24px;
+}
+
+.card-stats ul li h2 {
+  margin-bottom: 8px;
+}
+
+.card-stats ul li p {
+  mix-blend-mode: normal;
+  opacity: 0.75;
+}
+
+/* Footer */
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
 }
 /*# sourceMappingURL=main.css.map */
