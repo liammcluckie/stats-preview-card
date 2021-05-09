@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
 
     <link
       rel="icon"
@@ -17,36 +16,45 @@
   </head>
   <body>
     <main>
+      <!-- Card -->
       <div class="card-container">
-        <div class="card-img">
-          <img
-            srcset="
-              assets/images/image-header-mobile.jpg  654w,
-              assets/images/image-header-desktop.jpg 540w
-            "
-            sizes="(min-width: 1024px) 555px, 327px"
-            src="assets/images/image-header-mobile.jpg"
-            alt="Image of meeting taking place"
-          />
+        <!-- Card Image -->
+        <div class="card-img-cointainer">
+          <div class="card-image"></div>
         </div>
+        <!-- Card Header -->
         <div class="card-header">
-          <h1>Get insights that help your business grow.</h1>
+          <h1>
+            Get <span id="accent">insights</span> that help your business grow.
+          </h1>
         </div>
+        <!-- Card Content -->
         <div class="card-content">
           <p>
             Discover the benefits of data analytics and make better decisions
             regarding revenue, customer experience, and overall efficiency.
           </p>
         </div>
+        <!-- Card Stats -->
         <div class="card-stats">
-          <ul>
-            <li class="companies">10k+ companies</li>
-            <li class="templates">314 templates</li>
-            <li class="queries">12m+ queries</li>
+          <ul class="uppercase">
+            <li class="companies">
+              <h2>10k+</h2>
+              <p>companies</p>
+            </li>
+            <li class="templates">
+              <h2>314</h2>
+              <p>templates</p>
+            </li>
+            <li class="queries">
+              <h2>12m+</h2>
+              <p>queries</p>
+            </li>
           </ul>
         </div>
       </div>
     </main>
+    <!-- Footer -->
     <footer>
       <div class="attribution">
         Challenge by
