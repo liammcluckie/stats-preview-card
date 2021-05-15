@@ -48,42 +48,48 @@ body {
 
 body {
   font-size: 15px;
-  font-family: "Inter";
+  font-family: "Inter", sans-serif;
   letter-spacing: 1px;
   background-color: color(main-bg);
   color: color(paragraph);
-  display: flex;
-  flex-direction: column;
   height: 100vh;
   position: relative;
-}
-
-ul,
-li {
-  list-style: none;
+  display: flex;
+  flex-direction: column;
 }
 
 main {
   margin: 0 auto;
+
+  @include desktop {
+    flex-direction: row;
+  }
 }
 
 /* Card */
 .card-container {
   width: 20.5rem;
-  height: auto;
   text-align: center;
   background-color: color(card-bg);
   border-radius: 8px;
   margin: 88px 24px;
-  padding-bottom: 32px;
 
   @include desktop {
     width: 1110px;
-    position: fixed;
+    height: 446px;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     margin-top: 0;
+  }
+}
+
+.card-content-container {
+  @include desktop {
+    width: 50%;
+    padding: 2.75rem 6rem;
+    text-align: start;
   }
 }
 
@@ -94,6 +100,7 @@ main {
     float: right;
   }
 }
+
 .card-image {
   width: 327px;
   height: 240px;
@@ -121,7 +128,7 @@ main {
   line-height: 32px;
 
   @include desktop {
-    width: 50%;
+    line-height: 44px;
   }
 }
 
@@ -136,28 +143,36 @@ main {
   line-height: 25px;
   mix-blend-mode: normal;
   opacity: 0.75;
+  padding: 0 1rem;
 
   @include desktop {
-    width: 50%;
+    padding: 1.5rem 0.4rem 1.5rem 0;
+    line-height: 25px;
   }
 }
 
 /* Card stats */
 .card-stats {
   @include desktop {
-    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
 
-.card-stats ul li {
+.queries {
+  padding-bottom: 12px;
+}
+
+.card-stats > * {
   margin-bottom: 24px;
 }
 
-.card-stats ul li h2 {
+.card-stats h2 {
   margin-bottom: 8px;
 }
 
-.card-stats ul li p {
+.card-stats p {
   mix-blend-mode: normal;
   opacity: 0.75;
 }
@@ -166,6 +181,18 @@ main {
 .attribution {
   font-size: 11px;
   text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  @include desktop {
+    position: absolute;
+    bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+  }
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
