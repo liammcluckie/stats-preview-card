@@ -76,9 +76,24 @@ main {
   border-radius: 8px;
   margin: 88px 24px;
   padding-bottom: 32px;
+
+  @include desktop {
+    width: 1110px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 0;
+  }
 }
 
 /* Card image */
+.card-img-container {
+  @include desktop {
+    width: 50%;
+    float: right;
+  }
+}
 .card-image {
   width: 327px;
   height: 240px;
@@ -91,12 +106,23 @@ main {
   background-size: cover;
   border-top-right-radius: 8px;
   border-top-left-radius: 8px;
+
+  @include desktop {
+    width: 100%;
+    height: 446px;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 8px;
+  }
 }
 
 /* Card Header */
 .card-header {
   margin-top: 40px;
   line-height: 32px;
+
+  @include desktop {
+    width: 50%;
+  }
 }
 
 #accent {
@@ -110,9 +136,19 @@ main {
   line-height: 25px;
   mix-blend-mode: normal;
   opacity: 0.75;
+
+  @include desktop {
+    width: 50%;
+  }
 }
 
 /* Card stats */
+.card-stats {
+  @include desktop {
+    width: 50%;
+  }
+}
+
 .card-stats ul li {
   margin-bottom: 24px;
 }
